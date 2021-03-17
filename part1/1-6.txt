@@ -1,0 +1,5 @@
+╭─ ~/repos/devops-with-docker | master ?1 ▓▒░·······································································································░▒▓ ✔ | 1m 49s | 14:38:50 ─╮
+╰─ docker run -it devopsdockeruh/pull_exercise                                                                                                                                ─╯
+Give me the password: basics
+You found the correct password. Secret message is:
+"This is the secret message"

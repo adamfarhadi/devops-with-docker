@@ -1,0 +1,26 @@
+╭─ ~/repos/devops-with-docker | master ▓▒░··············································································································░▒▓ ✔ | 4s | 14:31:52 ─╮
+╰─ docker image ls -a                                                                                                                                                         ─╯
+REPOSITORY                          TAG       IMAGE ID       CREATED       SIZE
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   3 days ago    83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   3 days ago    15.7MB
+devopsdockeruh/simple-web-service   latest    99f995eeaa58   3 days ago    10.1MB
+ubuntu                              latest    4dd97cefde62   13 days ago   72.9MB
+ubuntu                              18.04     329ed837d508   13 days ago   63.3MB
+
+╭─ ~/repos/devops-with-docker | master ▓▒░·········································································································░▒▓ INT х | 26s | 14:34:25 ─╮
+╰─ docker run -d -it --rm devopsdockeruh/simple-web-service:alpine                                                                                                            ─╯
+80ec81f017cbd9ebd50d0f865923c37fbd141b53a1ba740917326ad6a143b87e
+
+╭─ ~/repos/devops-with-docker | master ▓▒░···················································································································░▒▓ ✔ | 14:34:30 ─╮
+╰─ docker exec -it 80e sh                                                                                                                                                     ─╯
+/usr/src/app # tail -f ./text.log
+2021-03-17 13:34:30 +0000 UTC
+2021-03-17 13:34:32 +0000 UTC
+2021-03-17 13:34:34 +0000 UTC
+2021-03-17 13:34:36 +0000 UTC
+2021-03-17 13:34:38 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2021-03-17 13:34:40 +0000 UTC
+2021-03-17 13:34:42 +0000 UTC
+^C
+/usr/src/app # exit

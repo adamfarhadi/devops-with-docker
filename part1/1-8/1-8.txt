@@ -1,0 +1,43 @@
+╭─ ~/repos/devops-with-docker/part1/1-8 | master ?4 ▓▒░··································································································░▒▓ 127 х | 20:05:58 ─╮
+╰─ docker build . -t 1-8:curler                                                                                                                                               ─╯
+[+] Building 1.8s (9/9) FINISHED
+ => [internal] load build definition from Dockerfile                                                                                                                        0.0s
+ => => transferring dockerfile: 36B                                                                                                                                         0.0s
+ => [internal] load .dockerignore                                                                                                                                           0.0s
+ => => transferring context: 2B                                                                                                                                             0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:18.04                                                                                                             1.3s
+ => [1/4] FROM docker.io/library/ubuntu:18.04@sha256:4bc3ae6596938cb0d9e5ac51a1152ec9dcac2a1c50829c74abd9c4361e321b26                                                       0.0s
+ => [internal] load build context                                                                                                                                           0.0s
+ => => transferring context: 151B                                                                                                                                           0.0s
+ => CACHED [2/4] WORKDIR /usr/src/app                                                                                                                                       0.0s
+ => [3/4] COPY 1-8.sh .                                                                                                                                                     0.0s
+ => [4/4] RUN chmod +x 1-8.sh                                                                                                                                               0.3s
+ => exporting to image                                                                                                                                                      0.0s
+ => => exporting layers                                                                                                                                                     0.0s
+ => => writing image sha256:8dcc0c34e3d8ecdd328f111dcd6c07ade58593b543437190217919d7befef3ff                                                                                0.0s
+ => => naming to docker.io/library/1-8:curler
+
+╭─ ~/repos/devops-with-docker/part1/1-8 | master ?4 ▓▒░·····························································································░▒▓ 127 х | 6s | 20:07:54 ─╮
+╰─ docker run -it 1-8:curler
+...
+Fetched 22.1 MB in 2s (11.7 MB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+...
+After this operation, 14.7 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+...
+done.
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
