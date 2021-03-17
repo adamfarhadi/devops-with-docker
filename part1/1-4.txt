@@ -1,0 +1,22 @@
+╭─ ~/repos/devops-with-docker | master ?1 ▓▒░··········································································································░▒▓ ✔ | 19s | 13:33:30 ─╮
+╰─ docker run -it --rm ubuntu sh -c 'apt-get update; apt-get install curl; echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [109 kB]
+...
+Fetched 17.3 MB in 1s (12.2 MB/s)
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+...
+done.
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>

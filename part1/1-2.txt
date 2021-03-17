@@ -1,0 +1,7 @@
+╭─ ~/repos/devops-with-docker | master ?1 ▓▒░·········································································░▒▓ ✔ | 12:27:25 ─╮
+╰─ docker ps -as                                                                                                                       ─╯
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES     SIZE
+
+╭─ ~/repos/devops-with-docker | master ?1 ▓▒░·········································································░▒▓ ✔ | 12:27:35 ─╮
+╰─ docker images                                                                                                                       ─╯
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE

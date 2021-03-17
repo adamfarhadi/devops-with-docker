@@ -1,0 +1,6 @@
+╭─ ~/repos/devops-with-docker | master ▓▒░············································································░▒▓ ✔ | 12:23:25 ─╮
+╰─ docker ps -a                                                                                                                        ─╯
+CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS                       PORTS     NAMES
+4941afae7342   nginx     "/docker-entrypoint.…"   About a minute ago   Exited (0) 7 seconds ago               funny_shaw
+bc56c2710bd5   nginx     "/docker-entrypoint.…"   About a minute ago   Exited (0) 7 seconds ago               wonderful_feynman
+348fe7b0a28b   nginx     "/docker-entrypoint.…"   About a minute ago   Up About a minute            80/tcp    jolly_fermat
