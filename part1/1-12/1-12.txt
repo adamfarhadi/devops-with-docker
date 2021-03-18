@@ -1,0 +1,26 @@
+╭─ ~/repos/devops-with-docker/part1/test/material-applications/example-frontend | main ▓▒░···························································░▒▓ 1 х | 14s | 22:27:14 ─╮
+╰─ cp ../../../1-12/Dockerfile . && docker build . -t 1-12                                                                                                                    ─╯
+[+] Building 99.0s (11/11) FINISHED
+ => [internal] load build definition from Dockerfile                                                                                                                        0.0s
+ => => transferring dockerfile: 224B                                                                                                                                        0.0s
+ => [internal] load .dockerignore                                                                                                                                           0.0s
+ => => transferring context: 34B                                                                                                                                            0.0s
+ => [internal] load metadata for docker.io/library/node:14.16.0-alpine3.13                                                                                                  0.5s
+ => [1/6] FROM docker.io/library/node:14.16.0-alpine3.13@sha256:eb2b2be77fbb7515ba116dbf20b55df0523e9d32e0c7b22bb5d625bdd0ad9109                                            0.0s
+ => [internal] load build context                                                                                                                                           0.0s
+ => => transferring context: 1.21kB                                                                                                                                         0.0s
+ => CACHED [2/6] WORKDIR /usr/src/app                                                                                                                                       0.0s
+ => CACHED [3/6] COPY . .                                                                                                                                                   0.0s
+ => [4/6] RUN npm install                                                                                                                                                  52.1s
+ => [5/6] RUN npm install -g serve                                                                                                                                          5.5s
+ => [6/6] RUN npm run build                                                                                                                                                26.7s
+ => exporting to image                                                                                                                                                     14.0s
+ => => exporting layers                                                                                                                                                    14.0s
+ => => writing image sha256:c64735e9145075e48ad7c051fa532085c8f2e6e390ba9a3e8622ee45da759393                                                                                0.0s
+ => => naming to docker.io/library/1-12                                                                                                                                     0.0s
+
+╭─ ~/repos/devops-with-docker/part1/test/material-applications/example-frontend | main ▓▒░·····························································░▒▓ ✔ | 18s | 22:30:19 ─╮
+╰─ docker run -p 4567:5000 1-12                                                                                                                                               ─╯
+INFO: Accepting connections at http://localhost:5000
+^C
+INFO: Gracefully shutting down. Please wait...
