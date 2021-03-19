@@ -1,0 +1,37 @@
+╭─ ~/repos/devops-with-docker/test/material-applications/example-backend | main ▓▒░········································································░▒▓ 1 х | 09:32:14 ─╮
+╰─ cp ../../../part1/1-13/Dockerfile . && docker build . -t 1-13                                                                                                              ─╯
+[+] Building 9.1s (10/10) FINISHED
+ => [internal] load build definition from Dockerfile                                                                                                                        0.0s
+ => => transferring dockerfile: 167B                                                                                                                                        0.0s
+ => [internal] load .dockerignore                                                                                                                                           0.0s
+ => => transferring context: 111B                                                                                                                                           0.0s
+ => [internal] load metadata for docker.io/library/golang:1.15-alpine                                                                                                       0.6s
+ => [1/5] FROM docker.io/library/golang:1.15-alpine@sha256:a025015951720f3227acd51b0a99a71578b574a63172ea7d2415c60ae5e2bc0a                                                 0.0s
+ => [internal] load build context                                                                                                                                           0.0s
+ => => transferring context: 28.49kB                                                                                                                                        0.0s
+ => CACHED [2/5] WORKDIR /usr/src/app                                                                                                                                       0.0s
+ => [3/5] COPY . .                                                                                                                                                          0.0s
+ => [4/5] RUN export PORT=8080                                                                                                                                              0.3s
+ => [5/5] RUN go build                                                                                                                                                      7.1s
+ => exporting to image                                                                                                                                                      1.0s
+ => => exporting layers                                                                                                                                                     1.0s
+ => => writing image sha256:0c9e8b4056b396a37441fe1c99cf6720bf82782c4a2ec68cd748d4b7a862d3b6                                                                                0.0s
+ => => naming to docker.io/library/1-13                                                                                                                                     0.0s
+
+╭─ ~/repos/devops-with-docker/test/material-applications/example-backend | main ▓▒░·······························································░▒▓ 2 х | 1m 13s | 09:33:55 ─╮
+╰─ docker run -p 4567:8080 1-13                                                                                                                                               ─╯
+[Ex 2.4+] REDIS_HOST env was not passed so redis connection is not initialized
+[Ex 2.6+] POSTGRES_HOST env was not passed so postgres connection is not initialized
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /ping                     --> server/router.pingpong (4 handlers)
+[GIN-debug] GET    /messages                 --> server/controller.GetMessages (4 handlers)
+[GIN-debug] POST   /messages                 --> server/controller.CreateMessage (4 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2021/03/19 - 08:34:03 | 200 |       90.04µs |      172.17.0.1 | GET      "/ping"
+[GIN] 2021/03/19 - 08:34:03 | 404 |      13.501µs |      172.17.0.1 | GET      "/favicon.ico"
+^C%
