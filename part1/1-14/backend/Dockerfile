@@ -1,16 +1,16 @@
-FROM  golang:1.15-alpine
-
-EXPOSE 8080
+FROM golang:1.15-alpine
 
 WORKDIR /usr/src/app
+
+EXPOSE 8080
 
 COPY . .
 
 ENV PORT=8080
 
-ENV REQUEST_ORIGIN="http://localhost"
+ENV REQUEST_ORIGIN="http://127.0.0.1:4567"
 
 RUN go build
 
-CMD ["./server"]
+ENTRYPOINT ./server
 
