@@ -1,0 +1,12 @@
+~/repos/devops-with-docker/part2/2-1 master ?1                                                                                                   18:15:49
+❯ docker-compose run 2-1
+Creating 2-1_2-1_run ... done
+Starting log output
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+^CERROR: 130
+
+~/repos/devops-with-docker/part2/2-1 master ?1                                                                                          ✘ INT 5s 18:15:56
+❯ cat text.log
+2021-03-20 17:15:53 +0000 UTC
+2021-03-20 17:15:55 +0000 UTC
