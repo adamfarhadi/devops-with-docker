@@ -1,0 +1,11 @@
+version: '3.5'
+
+services: 
+  2-3-frontend:
+    image: 1-14-frontend
+    ports: 
+      - 4567:5000
+  2-3-backend:
+    image: 1-14-backend
+    ports: 
+      - 4568:8080
