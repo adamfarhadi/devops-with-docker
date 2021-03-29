@@ -4,6 +4,6 @@ My solutions for the DevOps with Docker course offered by Open University at the
 ## [Part 1](https://devopswithdocker.com/part1/)
 * Exercises done: 16/16
 
-## [Part 1](https://devopswithdocker.com/part2/)
+## [Part 2](https://devopswithdocker.com/part2/)
 * Exercises done: 15/16
   * Note: Exercise 2.7 was not done due to build issues on Apple Silicon
