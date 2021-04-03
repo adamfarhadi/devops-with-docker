@@ -1,0 +1,6 @@
+Link to web app: https://dwd-coursepage-820.herokuapp.com/
+
+Config on GitHub: https://github.com/adamfarhadi/docker-hy.github.io/blob/master/.github/workflows/heroku.yml
+
+Note: I had some trouble getting the web-app up and running until I inspected the logs. I had to add a Procfile to the root of the rep and run the following command: "heroku ps:scale web=1 -a dwd-coursepage-820"
+
