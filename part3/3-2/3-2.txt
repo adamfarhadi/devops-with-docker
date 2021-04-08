@@ -1,0 +1,68 @@
+~/repos/devops-with-docker/part3/3-2 master ?1                                                                                                   29s 14:55:06
+❯ docker build . -t 3-2
+[+] Building 6.5s (9/9) FINISHED
+ => [internal] load build definition from Dockerfile                                                                                                     0.4s
+ => => transferring dockerfile: 36B                                                                                                                      0.0s
+ => [internal] load .dockerignore                                                                                                                        0.5s
+ => => transferring context: 2B                                                                                                                          0.0s
+ => [internal] load metadata for docker.io/library/docker:latest                                                                                         0.8s
+ => [internal] load build context                                                                                                                        0.3s
+ => => transferring context: 332B                                                                                                                        0.0s
+ => [1/4] FROM docker.io/library/docker:latest@sha256:0bc2c31bd4bf422f6e30a44449acb41e7c9bfd62bf9871504d482e26e12e94bc                                   0.0s
+ => CACHED [2/4] WORKDIR /usr/src/app                                                                                                                    0.0s
+ => [3/4] COPY . .                                                                                                                                       0.5s
+ => [4/4] RUN apk add bash git                                                                                                                           2.8s
+ => exporting to image                                                                                                                                   1.1s
+ => => exporting layers                                                                                                                                  0.7s
+ => => writing image sha256:c3bacb256e709f66512a0620c12d8a5e6ff70cdfb5b9f2e526af9b4fe9b3a2fb                                                             0.0s
+ => => naming to docker.io/library/3-2
+
+~/repos/devops-with-docker/part3/3-2 master ?1                                                                                                    6s 14:55:43
+❯ docker run -v /var/run/docker.sock:/var/run/docker.sock -it 3-2
+Cloning into 'docker-hy.github.io'...
+remote: Enumerating objects: 220, done.
+remote: Counting objects: 100% (220/220), done.
+remote: Compressing objects: 100% (154/154), done.
+remote: Total 1593 (delta 121), reused 125 (delta 61), pack-reused 1373
+Receiving objects: 100% (1593/1593), 894.75 KiB | 5.23 MiB/s, done.
+Resolving deltas: 100% (896/896), done.
+[+] Building 23.5s (17/17) FINISHED
+ => [internal] load build definition from Dockerfile                                                                                                     0.5s
+ => => transferring dockerfile: 354B                                                                                                                     0.0s
+ => [internal] load .dockerignore                                                                                                                        0.8s
+ => => transferring context: 71B                                                                                                                         0.0s
+ => [internal] load metadata for docker.io/library/node:alpine                                                                                           0.8s
+ => [internal] load metadata for docker.io/jekyll/jekyll:3.8.3                                                                                           0.8s
+ => [stage-1 1/3] FROM docker.io/library/node:alpine@sha256:00e87cb9f5cbb4943c55d97c2115c1b6cd1d3dc5dbc641751ebe94b25d0746e3                             0.0s
+ => [build-stage 1/8] FROM docker.io/jekyll/jekyll:3.8.3@sha256:63373094d5c200e5930acd91068ba17aeb059b890546916f297f1d012a65d736                         0.0s
+ => [internal] load build context                                                                                                                        0.6s
+ => => transferring context: 1.62MB                                                                                                                      0.1s
+ => CACHED [build-stage 2/8] WORKDIR /tmp                                                                                                                0.0s
+ => CACHED [build-stage 3/8] COPY Gemfile* ./                                                                                                            0.0s
+ => CACHED [build-stage 4/8] RUN bundle install                                                                                                          0.0s
+ => CACHED [build-stage 5/8] WORKDIR /usr/src/app                                                                                                        0.0s
+ => [build-stage 6/8] COPY . .                                                                                                                           0.7s
+ => [build-stage 7/8] RUN chown -R jekyll .                                                                                                              6.7s
+ => [build-stage 8/8] RUN jekyll build                                                                                                                  11.8s
+ => CACHED [stage-1 2/3] RUN npm install -g serve                                                                                                        0.0s
+ => [stage-1 3/3] COPY --from=build-stage /usr/src/app/_site/ /usr/src/html                                                                              0.6s
+ => exporting to image                                                                                                                                   0.8s
+ => => exporting layers                                                                                                                                  0.5s
+ => => writing image sha256:9c7b48cd81a7023b1d7ec713ee2c037cb65cfd3fb4751d7906d6a9df3be0a08f                                                             0.0s
+ => => naming to docker.io/adamfarhadi/coursepage:3-2                                                                                                    0.0s
+Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
+Username: adamfarhadi
+Password:
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+The push refers to repository [docker.io/adamfarhadi/coursepage]
+692cdb68b864: Pushed
+623bbd875a27: Layer already exists
+ff3f760523a7: Layer already exists
+b51db60d6a75: Layer already exists
+2b633f82c43b: Layer already exists
+f2d773a126ea: Layer already exists
+3-2: digest: sha256:3d9418a841ac9bebfac42de3ffcc226e0b2b6a6774320ae30137f689fb0423be size: 1579
