@@ -1,0 +1,5 @@
+original frontend (from 3.4): 1.12GB
+new optimized frontend: 341MB
+
+original backend (from 3.4): 872MB
+new optimized backend: 440MB

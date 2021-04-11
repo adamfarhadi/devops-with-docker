@@ -1,0 +1,7 @@
+original frontend (from 3.3): 1.12GB
+new optimized frontend: 1.12GB
+
+original backend (from 3.3): 872MB
+new optimized backend: 872MB
+
+Note that I am pulling from node:14.16.0 and golang:1.16 respectively instead of ubuntu:18.04 which is probably the reason for no changes in the size of the images.
