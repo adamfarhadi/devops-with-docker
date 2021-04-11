@@ -1,0 +1,11 @@
+version: "3.5"
+
+services:
+  phonebook-frontend:
+    image: phonebook-frontend
+    ports:
+      - 3000:3000
+  phonebook-backend:
+    image: phonebook-backend
+    ports:
+      - 3001:3001
