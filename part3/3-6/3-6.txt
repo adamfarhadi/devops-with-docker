@@ -1,0 +1,7 @@
+frontend from 3.4: 1.12GB
+frontend from 3.5: 341MB
+frontend from 3.6: 123MB
+
+backend from 3.4: 872MB
+backend from 3.5: 440MB
+backend from 3.6: 18.1MB
